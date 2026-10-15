@@ -65,6 +65,10 @@ class Conversation:
         self.mic.stop()
         self.speaker.stop()
 
+    def clear_memory(self):
+        self.chatbot.clear_memory()
+        self._emit("log", "（记忆已清除）")
+
     # ---- 内部 ----
     def _emit(self, kind, text):
         self.ui_queue.put((kind, text))

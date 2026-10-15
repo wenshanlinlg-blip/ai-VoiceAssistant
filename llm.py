@@ -42,6 +42,14 @@ class ChatBot:
         except Exception:
             pass
 
+    def clear_memory(self):
+        self.messages = [self.system]
+        try:
+            if os.path.exists(self.memory_file):
+                os.remove(self.memory_file)
+        except Exception:
+            pass
+
     def chat(self, user_text):
         self.messages.append({"role": "user", "content": user_text})
         resp = self.client.chat.completions.create(
