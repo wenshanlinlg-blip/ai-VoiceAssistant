@@ -1,0 +1,15 @@
+# 虚拟环境
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 临时音频文件
+reply*.mp3
+reply*.wav
+
+# 密钥与隐私（不要提交到 git）
+config.json
+memory.json

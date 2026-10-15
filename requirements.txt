@@ -1,0 +1,6 @@
+openai
+requests
+faster-whisper
+sounddevice
+numpy
+pygame
